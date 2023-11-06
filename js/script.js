@@ -50,14 +50,14 @@ let memberElems = "";
 for (let i = 0; i < teamMembers.length; i++) {
     const curMember = teamMembers[i];
     memberElems += `<div class="col">
-    <div class="card" style="width: 18rem;">
-        <img src=${curMember.image} class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title">${curMember.name}</h5>
-          <p class="card-text">${curMember.role}</p>
-        </div>
-      </div>
-</div>`
+                        <div class="card" style="width: 18rem;">
+                            <img src=${curMember.image} class="card-img-top">
+                            <div class="card-body">
+                            <h5 class="card-title">${curMember.name}</h5>
+                            <p class="card-text">${curMember.role}</p>
+                            </div>
+                        </div>
+                    </div>`
 }
 
 rowElem.innerHTML = memberElems

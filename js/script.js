@@ -33,14 +33,22 @@ const teamMembers = [
     },
 ];
 
-// STAMPARE IN CONSOLE LE INFORMAZIONI DEGLI OGGETTI
+// STAMPARE IN CONSOLE LE INFORMAZIONI DEGLI OGGETTI e nel DOM come stringa
+
+const listElem = document.querySelector("ul");
+let elemStr    = "";
 
 for (let i = 0; i < teamMembers.length; i++) {
     const curMember = teamMembers[i];
+    elemStr += `<li>`
     for (let key in curMember){
         console.log(key, curMember[key]);
+        elemStr += `<p>${curMember[key]}</p>`
     }
+    elemStr += `</li>`
 }
+
+listElem.innerHTML = elemStr
 
 // INSERIRE IN PAGINA SOTTO FORMA DI CARD 
 
